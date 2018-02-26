@@ -1,0 +1,26 @@
+.topBox{
+  background-color:black;
+  color:white;
+  text-align:center;
+  padding:5px;
+}
+.leftBox{
+  line-height:30px;
+  background-color:#eeeeee;
+  height:300px;
+  width:350px;
+  float:left;
+  padding:5px;
+}
+.rightBox{
+  width:350px;
+  float:left;
+  padding:10px;
+}
+.bottomBox{
+  background-color:black;
+  color:white;
+  clear:both;
+  text-align:center;
+  padding:5px;
+}

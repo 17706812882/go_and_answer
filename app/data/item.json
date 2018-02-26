@@ -1,0 +1,53 @@
+[
+
+  {
+    "groupId":1,
+    "items":{
+      "totalCount": 10,
+      "currentIndex": 1,
+      "rows": [
+        {
+          "id": 1,
+          "content": "下列不属于杜甫的《闻官军收河南河北》的是?",
+          "options": [
+            "A:剑外忽传收蓟北",
+            "B:即从巴峡穿巫峡",
+            "C:可怜后主还寺庙",
+            "D:却看妻子愁何在"
+          ],
+          "selected": ""
+        },
+        {
+          "id": 2,
+          "content": "下列不属于唐朝诗人的是?",
+          "options": [
+            "A:李白",
+            "B:杜甫",
+            "C:李安"
+          ],
+          "selected": ""
+        }
+      ]
+    }
+  },
+  {
+    "groupId":2,
+    "items":{
+      "totalCount": 1,
+      "currentIndex": 0,
+      "rows": [
+        {
+          "id": 1,
+          "content": "1959年，人民解放军经过2年多，彻底平息什么叛乱，实行民主改革，百万农奴得到翻身",
+          "options": [
+            "A:西藏",
+            "B:新疆",
+            "C:西康",
+            "D:边疆"
+          ],
+          "selected": ""
+        }
+      ]
+    }
+  }
+]
