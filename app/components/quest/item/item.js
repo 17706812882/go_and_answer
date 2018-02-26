@@ -1,13 +1,28 @@
 import React from 'react';
 require('./item.css');
-var itemData   = require('../../data/item.json')
+var itemData   = require('../../../data/item.json')
 
 export default class Item extends React.Component {
   constructor(props) {
     super(props);
-
+      this.state = {
+          currentIndex:0
+      }
   }
+    handleClick = (total,answerIndex)=>{
+        console.log("Item option select : answerIndex=" + answerIndex+"|total="+total);
 
+        if(this.state.currentIndex+1 == total){
+            alert("已经答完所有的题目");
+        }else{
+            this.setState(
+                {currentIndex:this.state.currentIndex+1}
+            );
+        }
+
+
+
+    }
   render() {
       var selectedGroupId = this.props.selectedGroupId;
       var groupItemData;
@@ -26,20 +41,20 @@ export default class Item extends React.Component {
         var res = [];
 
         for(var i=0;i<currentItem.options.length;i++){
-        res.push(<ui key={i}>{currentItem.options[i]}</ui>);
-        console.log("add options")
-      }
+            res.push(<ui key={i}><div onClick={this.handleClick.bind(this, groupItemData.totalCount,currentItem.options[i])}  className="optionBox">{currentItem.options[i]}</div></ui>);
+            console.log("add options")
+        }
       return res;
     }
     return (
       <div className="itemBox">
-        本题组共有[{groupItemData.totalCount}]到题目，当前第[{groupItemData.currentIndex}]道题
+        本题组共有[{groupItemData.totalCount}]到题目，当前第[{this.state.currentIndex+1}]道题
         <div className="itemContent">
-          {<span>题目:{groupItemData.rows[groupItemData.currentIndex].content}</span>}
+          {<span>题目:{groupItemData.rows[this.state.currentIndex].content}</span>}
           <ul className="itemAnswerBox">
-            {list(groupItemData.currentIndex)}
+            {list(this.state.currentIndex)}
           </ul>
-          <div>你的答案:<input type="text" /></div>
+
         </div>
       </div>
 

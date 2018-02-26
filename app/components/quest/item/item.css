@@ -1,0 +1,14 @@
+
+
+.itemBox{
+  border:1px black solid
+}
+.itemContent{
+  border:1px black solid
+}
+.itemAnswerBox{
+  border:1px black solid
+}
+.optionBox{
+  border:1px black solid;margin-bottom:2px;width: 250px;height:30px;
+}

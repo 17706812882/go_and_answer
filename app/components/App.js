@@ -1,8 +1,8 @@
 import React from 'react';
 require('./App.css');
 
-import Group from './questionGroup/group';
-import Item from './questionItem/item';
+import Group from './quest/group/group';
+import Item from './quest/item/item';
 
 export default class App extends React.Component {
   constructor(props) {

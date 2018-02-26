@@ -1,6 +1,6 @@
 import React from 'react';
 require('./group.css');
-var groupData   = require('../../data/group.json')
+var groupData   = require('../../../data/group.json')
 
 
 /**
