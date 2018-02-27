@@ -1,40 +1,41 @@
 import React from 'react';
 require('./App.css');
 
-import Group from './quest/group/group';
-import Item from './quest/item/item';
+import ReactDOM from 'react-dom';
+import Admin from './admin/Admin';
+import Quest from './quest/Quest';
+import Header from './common/header/Header';
+import Footer from './common/footer/Footer';
+import { HashRouter,Link } from 'react-router-dom'
+import { HashRouter as Router, Route ,Redirect } from 'react-router-dom'
 
 export default class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      selectedGroupId:1
-    }
   }
-  /**
-   * 当group组件处理好单击事件之后，会调用父组件的方法，父组件更新状态，重新渲染，同时ITEM组件也会更新
-   * @param newState
-   */
-  onGroupChanged = (newState)=>{
-     console.log("App get Group Change Id :" + newState) ;
-     this.setState({selectedGroupId: newState});
-  }
+
   render() {
     return (
-      <div>
-        <div className="topBox">
-          <h1>全民共进</h1>
-        </div>
-        <div className="leftBox">
-          <Group callbackParent={this.onGroupChanged}></Group>
-        </div>
-        <div className="rightBox">
-          <Item selectedGroupId={this.state.selectedGroupId}></Item>
-        </div>
-        <div className="bottomBox">
-          <span>全国百家电视台支持，3亿观众互动参与</span>
-        </div>
-      </div>
+      <HashRouter>
+        <Router basename="/app" >
+          <div>
+            <Header/>
+            <ul className="navbar-nav">
+              <li className="navbar-item"><Link to="/">首页</Link></li>
+              <li className="navbar-item"><Link to="/questPrise">有奖题组</Link></li>
+              <li className="navbar-item"><Link to="/questHoliday">节目题组</Link></li>
+              <li className="navbar-item"><Link to="/questHot">热门题组</Link></li>
+              <li className="navbar-item"><Link to="/questPractise">练习题组</Link></li>
+            </ul>
+            <Route path="/questPrise" component={Quest}></Route >
+            <Route path="/questHoliday" component={Quest}></Route >
+            <Route path="/questHot" component={Quest}></Route >
+            <Route path="/questPractise" component={Quest}></Route >
+            <Route path="/admin" component={Admin}></Route >
+            <Footer></Footer>
+          </div>
+        </Router>
+      </HashRouter>
     );
   }
 }

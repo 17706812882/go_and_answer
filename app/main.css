@@ -1,0 +1,10 @@
+.navbar-nav{
+  list-style-type:none;
+  display:inline;
+  margin:0;
+  padding:0;
+}
+.navbar-item{
+  margin-left: 20px;
+  display:inline;
+}
