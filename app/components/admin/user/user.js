@@ -7,9 +7,9 @@ export default class User extends React.Component {
   render() {
     return (
       <div>
-        <div>
-          <span>用户个人管理</span>
-        </div>
+        <span>我的中奖纪录</span>
+        <hr/>
+        <span>对不起,暂无记录!</span>
       </div>
     );
   }

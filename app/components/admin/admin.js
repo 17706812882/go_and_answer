@@ -65,6 +65,15 @@ export default class Admin extends React.Component {
           </ul>
         </div>
         <div className="admin-op-box">
+          <table>
+            <tr>
+              <td>用户:</td><td>13506713021</td><td>等级:</td><td>无</td>
+            </tr>
+            <tr>
+              <td>全民币:</td><td>0个</td><td>现金:</td><td>0.00元</td>
+            </tr>
+          </table>
+          <hr/>
           {showOp()}
         </div>
 

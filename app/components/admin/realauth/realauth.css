@@ -1,0 +1,17 @@
+.realauth-box{
+  margin-left: 10px;
+  width:90%;
+  border:1px red solid;
+}
+.realauth-box table{
+  border:1px red solid;
+  margin-top: 20px;
+  margin-left: 50px;
+  cellspacing: 20px;
+}
+.realauth-box > input{
+  margin-top: 20px;
+  width: 100px;
+  color: cadetblue;
+  margin-left: 50px;
+}

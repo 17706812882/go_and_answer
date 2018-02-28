@@ -7,9 +7,9 @@ export default class Coin extends React.Component {
   render() {
     return (
       <div>
-        <div>
-          <span>虚拟币管理</span>
-        </div>
+        <span>全民币明细</span>
+        <hr/>
+        <span>对不起,暂无记录!</span>
       </div>
     );
   }

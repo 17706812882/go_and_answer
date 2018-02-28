@@ -7,9 +7,7 @@ export default class Lucky extends React.Component {
   render() {
     return (
       <div>
-        <div>
-          <span>抽奖活动</span>
-        </div>
+        <span>对不起,暂无记录!</span>
       </div>
     );
   }

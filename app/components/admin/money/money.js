@@ -7,9 +7,9 @@ export default class Money extends React.Component {
   render() {
     return (
       <div>
-        <div>
-          <span>现金明细</span>
-        </div>
+        <span>现金明细</span>
+        <hr/>
+        <span>对不起,暂无记录!</span>
       </div>
     );
   }
